@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background-color: hsl(217, 54%, 11%);
+    padding-top: 50px;
+    color: hsl(215, 51%, 70%);
+    font-family: 'Outfit', sans-serif;
+}
+
+.main-container {
+    padding: 20px;
+}
+
+.card-container {
+    background: hsl(216, 50%, 16%);
+    padding: 20px;
+    box-shadow: 0px 0px 20px hsl(214, 81%, 8%);
+    border-radius: 10px;
+}
+
+.image {
+    width: 100%;
+    /* background-color: red; */
+    height: 250px;
+    border-radius: 10px;
+    background-image: url(images/image-equilibrium.jpg);
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    transition: all 30000ms;
+}
+
+.image:hover > #overlay {
+    opacity: 1;
+}
+
+#overlay {
+    background-color: hsl(178, 100%, 50%, 0.5);
+    width: 100%;
+    height: 100%;
+    /* position: relative; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0;
+    /* transform: translate(50%, 50%); */
+    transition: all 1000ms;
+}
+
+.white {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+.hover:hover {
+    color: hsl(178, 100%, 50%);
+}
+
+h2.white {
+    /* background-color: red; */
+    margin: 20px 0px;
+}
+
+p {
+    margin-bottom: 20px;
+    line-height: 2;
+    /* letter-spacing: 10px; */
+}
+
+.status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.status > * {
+    font-weight: bold;
+    display: flex;
+    gap: 5px;
+}
+
+.status > *:first-child {
+    color: hsl(178, 100%, 50%);
+}
+
+hr {
+    background: hsl(215, 32%, 27%);
+    border: none;
+    /* outline: none; */
+    height: 2px;
+    margin-bottom: 20px;
+}
+
+[alt="avatar"] {
+    /* border: 2px solid red; */
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 50%;
+    width: 50px;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+[alt='avatar'] {
+    cursor: pointer;
+}
+
+@media (width > 500px) {
+    body {
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .main-container {
+        padding: 0;
+        width: fit-content;
+        /* position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto; */
+    }
+
+    .card-container {
+        /* background-color: rd; */
+        
+        max-width: 300px;
+    }
+}
